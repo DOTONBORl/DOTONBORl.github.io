@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e1020" />
+  <title>계산한입 — 스마트 계산기</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><div class="brand"><span class="mark">+</span>계산한입</div><div class="tag">SMART CALCULATOR / 01</div></header>
+    <section class="hero"><h1>생각은 가볍게,<br><em>계산은 똑똑하게.</em></h1><p>일상 계산부터 부가세까지. 숫자를 누르거나 키보드로 바로 입력하세요.</p></section>
+    <section class="layout">
+      <div class="card calc" aria-label="계산기">
+        <div class="display" aria-live="polite"><div class="expression" id="expression"></div><output class="result" id="result">0</output></div>
+        <div class="quick"><button data-action="percent">현재 값의 1%</button><button data-action="vat">부가세 10% 더하기</button><button data-action="negate">부호 바꾸기</button></div>
+        <div class="keys" id="keys">
+          <button class="key clear" data-action="clear">AC</button><button class="key clear" data-action="backspace">⌫</button><button class="key op" data-value="(">(</button><button class="key op" data-value=")">)</button>
+          <button class="key" data-value="7">7</button><button class="key" data-value="8">8</button><button class="key" data-value="9">9</button><button class="key op" data-value="÷">÷</button>
+          <button class="key" data-value="4">4</button><button class="key" data-value="5">5</button><button class="key" data-value="6">6</button><button class="key op" data-value="×">×</button>
+          <button class="key" data-value="1">1</button><button class="key" data-value="2">2</button><button class="key" data-value="3">3</button><button class="key op" data-value="−">−</button>
+          <button class="key wide" data-value="0">0</button><button class="key" data-value=".">.</button><button class="key op" data-value="+">+</button>
+          <button class="key equals wide" data-action="equals">=</button><button class="key op wide" data-action="equals">계산</button>
+        </div>
+      </div>
+      <aside class="side">
+        <section class="card tips"><div class="eyebrow">QUICK START</div><h2>마음 가는 대로 누르세요</h2><p>괄호를 포함한 사칙연산을 지원합니다. 긴 계산은 바로 위에 식으로 남아요.</p><div class="shortcuts"><div class="shortcut"><span>계산</span><kbd>Enter</kbd></div><div class="shortcut"><span>지우기</span><kbd>Esc</kbd></div><div class="shortcut"><span>한 글자 지우기</span><kbd>Backspace</kbd></div></div></section>
+        <section class="card history"><div class="history-head"><h2>최근 계산</h2><button id="clear-history">전체 지우기</button></div><ul id="history-list"><li class="empty">아직 계산한 식이 없어요.</li></ul></section>
+      </aside>
+    </section>
+    <footer>계산한입 · 브라우저 안에서만 계산하고 기록합니다.</footer>
+  </main>
+</body>
+</html>
